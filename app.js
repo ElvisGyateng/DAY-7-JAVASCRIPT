@@ -77,23 +77,23 @@ const usersContainer = document.querySelector("#users");
 const users = [
     {
         name: "Elvis",
-        email: "elvis@gmail.com"
+        email: "elvis@example.com"
     },
     {
         name: "Kofi",
-        email: "kofi@gmail.com"
+        email: "kofi@example.com"
     },
     {
         name: "Ama",
-        email: "ama@gmail.com"
+        email: "ama@example.com"
     },
     {
         name: "Yaw",
-        email: "yaw@gmail.com"
+        email: "yaw@example.com"
     },
     {
         name: "Akua",
-        email: "akua@gmail.com"
+        email: "akua@example.com"
     }
 ];
 
@@ -125,11 +125,9 @@ loadUsersButton.addEventListener("click", async () => {
 
             usersContainer.appendChild(userElement);
         });
+
+        statusMessage.textContent = "";
     } catch (error) {
         statusMessage.textContent = "Sorry, something went wrong.";
-    } finally {
-        setTimeout(() => {
-            statusMessage.textContent = "";
-        }, 1000);
     }
 });
